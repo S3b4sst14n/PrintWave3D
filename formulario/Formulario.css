@@ -3,16 +3,12 @@
 }
 
 header {
-    background: #ffffffad;
+    background: #ffffffd4;
     width: 100%;
     position: fixed;
     z-index: 100;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-}
-
-.logo {
-    font-style: italic;
 }
 
 .banner {
