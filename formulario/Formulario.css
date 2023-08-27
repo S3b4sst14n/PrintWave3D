@@ -132,13 +132,11 @@ body {
     cursor: pointer;
 }
 
-.footer {
-    background: #ffffffad;
+footer {
     text-align: center;
     padding: 20px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    position: fixed;
-    bottom: 0;
+    background-color: #ffffffad;
+    color: rgb(0, 0, 0);
     width: 100%;
+    margin-top: auto;
 }
