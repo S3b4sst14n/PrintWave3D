@@ -53,7 +53,7 @@ nav ul li:hover {
 }
 
 body {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #5bc0de, #20c997, #3498db, #4e74b8);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     height: 100%;
