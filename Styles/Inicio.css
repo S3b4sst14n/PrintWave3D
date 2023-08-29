@@ -110,8 +110,7 @@ img {
 .content {
     display: flex;
     flex-direction: column;
-    /* Cambia a dirección vertical */
-    font-size: 30px;
+    font-size: 30px; 
     font-style: italic;
     border-radius: 30px;
     background: #ffffffad;
@@ -119,9 +118,7 @@ img {
     gap: 20px;
     padding: 30px;
     max-width: 600px;
-    /* Establece el límite de ancho para el contenido */
     margin: 0 auto;
-    /* Centra horizontalmente */
 }
 
 .footer {
