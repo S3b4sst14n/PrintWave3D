@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="Formulario.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" href="../Img/Logo.png">
-    <title>Formulario de reserva</title>
+    <link rel="stylesheet" href="../formulario/Formulario.css">
+    <title>Tu Página</title>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
-
 <body>
-    <header class="banner">
-        <link href="../Inicio.html" class="logo"><img src="../Img/Logo.png" ></lik>
+    <header>
+        <div class="logo">Mi Logo</div>
         <nav>
             <ul>
-                <li><a href="../Index.html">Inicio</a></li>
-                <li><a href="Formulario.html">¡Reserva aquí!</a></li>
-                <li><a href="../Info/info.html">Info</a></li>
+                <li><a href="../Inicio.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="#"><i class="fas fa-info-circle"></i> Acerca</a></li>
+                <li><a href="./formulario/Formulario.html"><i class="fas fa-folder-open"></i> ¡Reserva Aquí!</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i> Contacto</a></li>
             </ul>
         </nav>
     </header>
-
     <div class="form-register">
         <h4>Reserva tu fecha</h4>
         <form action="#" method="post">
@@ -30,7 +27,7 @@
                 <input type="date" id="date" name="date" required>
             </div>
             <div class="controls">
-                <label for="name">Nombres:</label>
+                <label for="name">Nombre:</label>
                 <input type="text" id="name" name="name" required>
             </div>
             <div class="controls">
@@ -40,43 +37,43 @@
             <button class="botons" type="submit">Reservar</button>
         </form>
     </div>
-    <footer class="footer">
-        <p>&copy; 2023 PrintWave3D. Proyecto Panfilo.</p>
-    </footer>
+    <!-- ... (código HTML anterior) ... -->
 
+<script>
+    (function() {
+        emailjs.init("CBkYgFHBBSzXhlGQQ"); // Reemplaza "user_your_user_id" con tu User ID de EmailJS
 
-    
-    <script>
-        (function() {
-        emailjs.init("D4ILizNNnYQCGVQpK"); // Reemplaza "user_your_user_id" con tu User ID de EmailJS
-        
         const form = document.querySelector("form");
-        
+
         form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        
-        const date = document.getElementById("date").value;
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        
-        const templateParams = {
-        to_email: email,
-        from_name: name,
-        message_html: `Has reservado para la fecha ${date}.`
-        };
-        
-        emailjs.send("service_4129d8j", "template_o1nibse", templateParams)
-        .then(function(response) {
-        console.log("Correo electrónico enviado con éxito", response);
-        // Aquí puedes mostrar un mensaje de éxito al usuario si lo deseas
-        }, function(error) {
-        console.error("Error al enviar el correo electrónico", error);
-        // Aquí puedes mostrar un mensaje de error al usuario si lo deseas
-        });
-        });
-        })();
-        </script>
+            event.preventDefault();
 
+            const date = document.getElementById("date").value;
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+
+            const templateParams = {
+                to_email: email,
+                from_name: name,
+                message_html: `Has reservado para la fecha ${date}.`
+            };
+
+            emailjs.send("service_lam1dth", "template_rj50ih6", templateParams)
+                .then(function(response) {
+                    console.log("Correo electrónico enviado con éxito", response);
+                    alert("¡Formulario enviado con éxito!"); // Mensaje de éxito
+                }, function(error) {
+                    console.error("Error al enviar el correo electrónico", error);
+                    alert("Hubo un error al enviar el formulario."); // Mensaje de error
+                });
+        });
+    })();
+</script>
+
+<!-- ... (código HTML posterior) ... -->
+
+<footer>
+    <p>Derechos de autor © 2023 PrintWave3D. Todos los derechos reservados.</p>
+</footer> 
 </body>
-
 </html>
